@@ -1,0 +1,65 @@
+.btn-mgt {
+    background-color: #7F7BC1;
+    border-color: #7F7BC1;
+    font-family: arial;
+    letter-spacing: 1px;
+
+    /* hover */
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #545194;
+    --bs-btn-hover-border-color: #545194;
+    /* /hover */
+    /* focus */
+    --bs-btn-focus-color: #fff;
+    --bs-btn-focus-bg: #545194;
+    --bs-btn-focus-border-color: #545194;
+    /* /focus */
+    /* active */
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #434088;
+    --bs-btn-active-border-color: #434088;
+    /* /active */
+}
+
+.nb-bg {
+    background-color: #AC0B7F;
+}
+
+.navbar-brand {
+    font-family: arial;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.navbar-nav .nav-link {
+    font-family: arial;
+    color: rgba(255, 255, 255, 0.37);
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover,
+.nav-link:focus,
+.nav-link:hover {
+    color: white;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn-outline-dark:hover {
+    background-color: #AC0B7F;
+}
+
+.bg-poli {
+    background-color: #7F7BC1
+}
+
+.bg-poli:hover {
+    background-color: #545194;
+}
