@@ -5,8 +5,8 @@
 
 <div class="card my-4 mx-auto border-0" style="max-width: 1200px;">
     <div class="row g-0">
-        <div class="col-md-5">
-            <img src="{{ asset('img/siaps-logo-nobg.png') }}" alt="SIAPS logo" class="img-fluid rounded-start" />
+        <div class="col-md-5 d-flex justify-content-center">
+            <img src="{{ asset('img/siaps-logo-nobg.png') }}" alt="SIAPS logo" class="img-fluid rounded-start">
         </div>
         <div class="col-md-7 my-auto">
             <div class="card-body bg-transparent">

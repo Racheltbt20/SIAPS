@@ -16,15 +16,23 @@ class RegistrasiController extends Controller
         $validatedData = $request->validate([
             'email' => 'required|email:dns|unique:users',
             'nama' => 'required|min:2|max:50',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8',
         ]);
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        // dd($validatedData);
+        $passadmin = 'AdminSIAPS123';
 
-        User::create($validatedData);
+        $request->validate([
+            'passadmin' => 'required'
+        ]);
 
-        return redirect()->route('login.index')->with('success', 'Registrasi berhasil! Silahkan login!');
+        if($request['passadmin'] == $passadmin) {
+            User::create($validatedData);
+            return redirect()->route('login.index')->with('success', 'Registrasi berhasil! Silahkan login!');
+        } else {
+            return redirect()->back()->with('error', 'Registrasi Gagal! Password admin salah!');
+        }
+
     }
 }

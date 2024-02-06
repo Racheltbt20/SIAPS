@@ -24,6 +24,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+                    @if (session()->has('error'))    
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>{{ session('error') }}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <div class="card border border-light-subtle rounded-3 shadow-sm">
                         <div class="card-body p-3 p-md-4 p-xl-5">
                             <div class="text-center mb-3">
@@ -65,6 +71,18 @@
                                                 placeholder="Password" required>
                                             <label for="password" class="form-label">Password</label>
                                             @error('password')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control @error('passadmin') is-invalid @enderror" name="passadmin" id="passadmin"
+                                                placeholder="Password Admin" required>
+                                            <label for="password" class="form-label">Password Admin</label>
+                                            @error('passadmin')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
                                                 </div>

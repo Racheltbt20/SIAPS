@@ -21,8 +21,8 @@ use App\Http\Controllers\RegistrasiController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
 
+// admin
 Route::middleware('guest')->group(function() {
-    // admin
     Route::get('/admin/registrasi', [RegistrasiController::class, 'index'])->name('registrasi.index');
     Route::post('/admin/registrasi', [RegistrasiController::class, 'store'])->name('registrasi.store');
     
@@ -32,6 +32,8 @@ Route::middleware('guest')->group(function() {
 
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/admin', [HomeController::class, 'admin'])->name('admin.home');
+
 Route::middleware('auth')->group(function() {
-    Route::get('/admin/home', [HomeController::class, 'admin'])->name('admin.home');
+    
 });

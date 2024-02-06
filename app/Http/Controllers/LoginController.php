@@ -32,6 +32,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login.index')->with('success', 'Logout berhasil!');
+        return redirect()->route('admin.home');
     }
 }
