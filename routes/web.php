@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\PoliController;
 use App\Http\Controllers\RegistrasiController;
 
 /*
@@ -20,6 +21,7 @@ use App\Http\Controllers\RegistrasiController;
 // resepsionis
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran');
+// end resepsionis
 
 // admin
 Route::middleware('guest')->group(function() {
@@ -35,5 +37,7 @@ Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')
 Route::get('/admin', [HomeController::class, 'admin'])->name('admin.home');
 
 Route::middleware('auth')->group(function() {
-    
+    // poli
+    Route::get('/admin/poli', [PoliController::class, 'index'])->name('admin.indexpoli'); 
 });
+// end admin

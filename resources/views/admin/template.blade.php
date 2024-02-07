@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link me-2 {{  request()->routeIs('admin.home') ? 'active' : '' }}" href="{{ route('admin.home') }}">home</a>
-                <a class="nav-link me-2 {{  request()->routeIs('admin.pendaftaran') ? 'active' : '' }}" href="#">poli</a>
+                <a class="nav-link me-2 {{  request()->routeIs('admin.indexpoli') ? 'active' : '' }}" href="{{ route('admin.indexpoli') }}">poli</a>
                 <a class="nav-link me-2 {{  request()->routeIs('admin.datadiri') ? 'active' : '' }}" href="#">data diri</a>
                 @guest
                     <a class="nav-link me-2" href="{{ route('login.index') }}">login</a>

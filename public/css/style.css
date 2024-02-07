@@ -63,3 +63,7 @@
 .bg-poli:hover {
     background-color: #545194;
 }
+
+.table-group-divider {
+    border-color: #434088;
+}
